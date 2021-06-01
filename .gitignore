@@ -4,3 +4,5 @@ target/*
 out/*
 out/
 target/
+test-output/
+test-output/*
