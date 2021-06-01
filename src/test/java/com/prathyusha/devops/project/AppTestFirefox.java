@@ -25,8 +25,10 @@ public class AppTestFirefox
                 "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
 
         System.out.println("Launching the firefox browser in headless mode...");
+        System.out.println("~/Documents/geckodriver");
      //   System.setProperty("webdriver.gecko.driver","/Users/prathyushatumuluri/Downloads/geckodriver");
         System.setProperty("webdriver.gecko.driver","~/Documents/geckodriver");
+        System.out.println("~/Documents/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         options.addArguments("-headless");
