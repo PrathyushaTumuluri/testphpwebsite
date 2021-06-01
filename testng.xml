@@ -3,11 +3,6 @@
 <suite name="Suite">
     <test thread-count="5" name="Test">
         <classes>
-<!--            <class name="com.prathyusha.devops.project.AppTestChrome">-->
-<!--              <methods>-->
-<!--                  <include name="verify" />-->
-<!--              </methods>-->
-<!--            </class>-->
             <class name="com.prathyusha.devops.project.AppTestFirefox">
                 <methods>
                     <include name="verify" />
