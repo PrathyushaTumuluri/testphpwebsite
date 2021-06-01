@@ -10,7 +10,7 @@ public class App
     {
         TestNG testng = new TestNG();
         List<String> suites = Lists.newArrayList();
-        suites.add("/Users/prathyushatumuluri/Documents/testphpwebsite/testng.xml");
+        suites.add("./testng.xml");
         testng.setTestSuites(suites);
         testng.run();
     }

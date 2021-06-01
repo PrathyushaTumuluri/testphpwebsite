@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class AppTest
+public class AppTestChrome
 {
     @Test
     public void verify()
@@ -23,14 +23,15 @@ public class AppTest
                 "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
 
         System.out.println("Launching the chrome browser in headless mode...");
-        System.setProperty("webdriver.chrome.driver","/Users/prathyushatumuluri/Downloads/chromedriver");
+      //  System.setProperty("webdriver.chrome.driver","/Users/prathyushatumuluri/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver","~/Documents/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setHeadless(true);
         chromeOptions.addArguments("-headless");
         WebDriver driver = new ChromeDriver(chromeOptions);
 
         System.out.println("Opening the php website...");
-        driver.get("http://localhost:8092/index.php");
+        driver.get("http://:8092/index.php");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         boolean isAboutButtonDisplayed = driver.findElement(By.xpath("//*[@id=\"About Us\"]")).isDisplayed();
