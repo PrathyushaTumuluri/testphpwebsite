@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class AppTestFirefox
 {
@@ -25,17 +23,16 @@ public class AppTestFirefox
                 "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
 
         System.out.println("Launching the firefox browser in headless mode...");
-        System.out.println("~/Documents/geckodriver");
      //   System.setProperty("webdriver.gecko.driver","/Users/prathyushatumuluri/Downloads/geckodriver");
-        System.setProperty("webdriver.gecko.driver","~/Documents/geckodriver");
-        System.out.println("~/Documents/geckodriver");
+        System.setProperty("webdriver.gecko.driver","/home/edureka/Documents/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         options.addArguments("-headless");
         WebDriver driver = new FirefoxDriver(options);
 
         System.out.println("Opening the php website...");
-        driver.get("http://localhost:8092/index.php");
+        // driver.get("http://localhost:8092/index.php");
+        driver.get("http://kslave1:8092/index.php");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         boolean isAboutButtonDisplayed = driver.findElement(By.xpath("//*[@id=\"About Us\"]")).isDisplayed();
